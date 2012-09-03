@@ -25,26 +25,26 @@ Command used to change the ICAP controller clock frequency. Reissuing this comma
 ###NCON : Number of Configurations
 Command used to find out how many times each partial bitstream is used for configuration using the configuration pointer buffer. 
 ###Example:
-For transferring 1000 bytes partial bitstream and 2000 bytes partial bitstream to the system memory and then use for configuration
-SRST                          //Soft reset the system
-CMOD                       //Enter command mode
-SLEN 001000           //Set the transfer length and DDR address
-SADR 000000
-DMOD                      //Now transfer the bitstream
-CMOD                      //Enter command mode
-SLEN 002000          //Set the transfer length and DDR address for second partial bitstream
-SADR 100000
-DMOD                     //Transfer the second bitstream
-CMOD                      //Enter the command mode
-SLEN 001000          //Now for configuring the first bitstream, again arm the DMA controller
-SADR 000000
-PICP                         //Configure using the DMA engine and ICAP controller
-CMOD                      //Enter command mode
-RST1                         //Read the statistics registers
-CMOD
-RST2
-CMOD
-SRST                         //Clear the statistics registers
-CMOD                      //Enter the command mode
-CINT1                       //Configure the system with the second bitstream using the configuration pointer     			        buffer
+For transferring 1000 bytes partial bitstream and 2000 bytes partial bitstream to the system memory and then use for configuration  
+SRST                      //Soft reset the system  
+CMOD                      //Enter command mode  
+SLEN 001000               //Set the transfer length and DDR address  
+SADR 000000  
+DMOD                      //Now transfer the bitstream  
+CMOD                      //Enter command mode  
+SLEN 002000               //Set the transfer length and DDR address for second partial bitstream  
+SADR 100000  
+DMOD                      //Transfer the second bitstream  
+CMOD                      //Enter the command mode  
+SLEN 001000               //Now for configuring the first bitstream, again arm the DMA controller  
+SADR 000000  
+PICP                      //Configure using the DMA engine and ICAP controller  
+CMOD                      //Enter command mode  
+RST1                      //Read the statistics registers  
+CMOD  
+RST2  
+CMOD  
+SRST                      //Clear the statistics registers  
+CMOD                      //Enter the command mode  
+CINT1                     //Configure the system with the second bitstream using the configuration pointer buffer  
 
