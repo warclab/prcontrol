@@ -26,7 +26,7 @@ Command used to change the ICAP controller clock frequency. Reissuing this comma
 Command used to find out how many times each partial bitstream is used for configuration using the configuration pointer buffer. 
 ###Example:
 For transferring 1000 bytes partial bitstream and 2000 bytes partial bitstream to the system memory and then use for configuration  
-SRST					//Soft reset the system  
+SRST "					  "//Soft reset the system  
 CMOD                      //Enter command mode  
 SLEN 001000               //Set the transfer length and DDR address  
 SADR 000000  
